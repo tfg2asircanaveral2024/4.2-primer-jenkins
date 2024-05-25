@@ -1,0 +1,11 @@
+services:
+  primer-jenkins:
+    image: 'jenkins/jenkins:latest-jdk17'
+    volumes:
+      - datos-jenkins:/var/jenkins_home
+    ports:
+      - 8080:8080
+
+volumes:
+  datos-jenkins:
+    driver: local
